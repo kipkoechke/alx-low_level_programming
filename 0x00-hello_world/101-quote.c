@@ -1,6 +1,6 @@
 #include<unistd.h>
 /**
- * main- prints and that piece of art followed by anew line to the standard error
+ * main- prints that piece of art followed by anew line to the standard error
  * Return: Always 1.
  **/
 

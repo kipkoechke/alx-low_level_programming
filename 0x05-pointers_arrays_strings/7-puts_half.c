@@ -3,8 +3,7 @@
  * puts_half - print half of a string
  * @str: validates the characters
  *
- * Return: Always 0 
- *
+ * Return: Always 0
  */
 void puts_half(char *str)
 {

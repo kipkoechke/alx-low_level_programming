@@ -2,12 +2,10 @@
 
 /**
  * string_toupper - function that changes all lowercase letters to uppercase.
- *
  * @s: s is the array
  *
  * Return: Always 0.
- */
- 
+ */ 
 char *string_toupper(char *s)
 {
 	int i = 0;

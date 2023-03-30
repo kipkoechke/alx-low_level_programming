@@ -5,7 +5,7 @@
  * @s: s is the array
  *
  * Return: Always 0.
- */ 
+ */
 char *string_toupper(char *s)
 {
 	int i = 0;

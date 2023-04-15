@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	{
 		multiply *= atoi(argv[argc - 2]);
 		multiply *= atoi(argv[argc - 1]);
-		printf("%d.n", multiply);
+		printf("%d\n", multiply);
 	}
 	else
 	{

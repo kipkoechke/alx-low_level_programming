@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int count;
 
 	(void)argv;
-	for (count = 0; count < argc; count ++)
+	for (count = 0; count < argc; count++)
 	{
 		if (count + 1 == argc)
 		{

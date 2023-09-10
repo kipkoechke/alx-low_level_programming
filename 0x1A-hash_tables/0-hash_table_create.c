@@ -1,37 +1,37 @@
-/*
- * File: 0-hash_table_create.c
- */
-
 #include "hash_tables.h"
 
 /**
- * hash_table_create - Creates a new hash table.
- * @size: The size of the hash table's array.
+ * hash_table_create - Creates a hash table.
+ * @size: The size of the hash table array.
  *
- * Return: On success, a pointer to the newly created hash table.
- *         On failure, returns NULL.
+ * Return: If memory allocation fails - NULL
+ *         Otherwise - a pointer to the new hash table.
  */
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
-    hash_table_t *new_table;
-    unsigned long int index;
+    hash_table_t *hash_table_created;
+    unsigned long int i;
 
-    /* Allocate memory for the hash table structure */
-    new_table = malloc(sizeof(hash_table_t));
-    if (new_table == NULL)
+    /* Allocate memory for the hash table */
+    hash_table_created = malloc(sizeof(hash_table_t));
+
+    if (hash_table_created == NULL)
         return (NULL);
 
-    /* Initialize the size of the hash table's array */
-    new_table->size = size;
+    hash_table_created->size = size;
+    hash_table_created->array = malloc(sizeof(hash_node_t *) * size);
 
-    /* Allocate memory for the array of hash nodes */
-    new_table->array = malloc(sizeof(hash_node_t *) * size);
-    if (new_table->array == NULL)
+    if (hash_table_created->array == NULL)
+    {
+        free(hash_table_created);
         return (NULL);
+    }
 
-    /* Initialize all elements of the array to NULL */
-    for (index = 0; index < size; index++)
-        new_table->array[index] = NULL;
+    for (i = 0; i < size; i++)
+    {
+        hash_table_created->array[i] = NULL;
+    }
 
-    return (new_table);
+    return (hash_table_created);
 }

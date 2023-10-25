@@ -1,0 +1,10 @@
+#!/usr/bin/env make
+# Makefile with variables
+
+# Variables
+CC = gcc  # Compiler
+SRC = main.c school.c  # Source files
+
+# The 'all' target, which is the default target.
+all:
+	@$(CC) $(SRC) -o school

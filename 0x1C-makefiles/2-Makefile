@@ -1,0 +1,12 @@
+#!/usr/bin/env make
+# First 'useful' Makefile
+
+# Variables
+CC = gcc  # Compiler
+SRC = school.c main.c  # Source files
+OBJ = $(SRC:.c=.o)  # Object files
+NAME = school  # Executable name
+
+# The 'all' target, which is the default target.
+all: $(OBJ)
+	@$(CC) $(OBJ) -o $(NAME)

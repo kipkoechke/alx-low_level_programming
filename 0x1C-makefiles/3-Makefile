@@ -1,9 +1,20 @@
-CC = gcc  # Compiler
-SRC = main.c school.c  # Source files
-OBJ = $(SRC:.c=.o)  # Object files
-NAME = school  # Executable name
-RM = rm -f  # File removal command
+#!/usr/bin/env make
+# This Makefile defines PHONY targets.
 
+# Define PHONY targets
+.PHONY: clean
+.PHONY: oclean
+.PHONY: fclean
+.PHONY: re
+
+# Define variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# Define targets
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
